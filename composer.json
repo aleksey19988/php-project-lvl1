@@ -8,8 +8,6 @@
             "email": "aleksey19988@gmail.com"
         }
     ],
-    "bin": [
-        "bin/brain-games"
-    ],
+    "bin": ["bin/brain-games"],
     "require": {}
 }
