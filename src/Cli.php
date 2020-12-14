@@ -1,9 +1,9 @@
 <?php
+
 namespace Src\Cli;
 
 use function cli\line;
 use function cli\prompt;
-
 
 function greeting()
 {
