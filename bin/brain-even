@@ -27,12 +27,7 @@ function brainEven()
         $randomNum = randomnum();
         line("Answer: {$randomNum}");
         $answer = prompt('Your answer');
-
-        if (isEven($randomNum)) {
-            $correctAnswer = 'yes';
-        } else {
-            $correctAnswer = 'no';
-        }
+        $correctAnswer = (isEven($randomNum)) ? 'yes' : 'no';
 
         if ($answer === $correctAnswer) {
             print_r("Correct!\n");

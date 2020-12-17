@@ -1,0 +1,35 @@
+#!/usr/bin/env php
+
+<?php
+
+use function Src\Cli\greeting;
+use function cli\line;
+use function cli\prompt;
+
+$autoloadPath1 = __DIR__ . '/../../../autoload.php';
+$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+
+if (file_exists($autoloadPath1)) {
+    require_once $autoloadPath1;
+} else {
+    require_once $autoloadPath2;
+}
+
+function brainCalc()
+{
+    $name = greeting();
+    line('What is the result of the expression?');
+    $attempt = 3;
+
+    $operations = ['+', '-', '*'];
+    for($i = 0; $i < $attempt; $i += 1) {
+        $firstNum = random_int(0, 100);
+        $secondNum = random_int(0, 100);
+        $peration = random_int(0, $operations[count($perations) - 1]);
+
+        print_r("{$firstNum} {$operator} {$secondNum}");
+    }
+
+}
+
+print_r(brainCalc());
