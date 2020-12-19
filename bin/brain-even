@@ -3,7 +3,6 @@
 <?php
 
 use function Src\Cli\greeting;
-use function Utilites\RandomNum\randomnum;
 use function Utilites\RandomNum\isEven;
 use function cli\line;
 use function cli\prompt;
@@ -24,15 +23,15 @@ function brainEven()
     $attempt = 3;
 
     for ($i = 0; $i < $attempt; $i += 1) {
-        $randomNum = randomnum();
-        line("Answer: {$randomNum}");
+        $randomNum = random_int(0, 100);
+        line("Question: {$randomNum}");
         $answer = prompt('Your answer');
         $correctAnswer = (isEven($randomNum)) ? 'yes' : 'no';
 
         if ($answer === $correctAnswer) {
             print_r("Correct!\n");
         } else {
-            return "\"{$answer}\" is wrong answer ;(. Correct answer was \"{$correctAnswer}\"\n Let's try again, {$name}\n";
+            return "'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'\nLet's try again, {$name}\n";
         }
         if ($i === 2) {
             return "Congratulations, {$name}!\n";
