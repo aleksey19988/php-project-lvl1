@@ -13,7 +13,15 @@ make install
 ## Brain even
 #### Start game command:
 ```
-brain-even
+make brain-even
 ```
 
 [![brain-even](https://asciinema.org/a/bOFQHvmBDOnDNSTa6Sod4Blhe.svg)](https://asciinema.org/a/bOFQHvmBDOnDNSTa6Sod4Blhe)
+
+## Brain calc
+#### Start game command:
+```
+make brain-calc
+```
+
+[![brain-calc](https://asciinema.org/a/tSGO95IINUid4TILc4cft6C6W.svg)](https://asciinema.org/a/tSGO95IINUid4TILc4cft6C6W)
