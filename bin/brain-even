@@ -2,10 +2,7 @@
 
 <?php
 
-use function Src\Cli\greeting;
 use function Utilites\RandomNum\isEven;
-use function cli\line;
-use function cli\prompt;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -18,25 +15,16 @@ if (file_exists($autoloadPath1)) {
 
 function brainEven()
 {
-    $name = greeting();
-    line('Answer "yes" if the number is even, otherwise answer "no".');
-    $attempt = 3;
+    return [
+        'rules' => 'Answer "yes" if the number is even, otherwise answer "no".',
+        'round' => function() {
+            $randomNum = random_int(0, 100);
+            $correctAnswer = (isEven($randomNum)) ? 'yes' : 'no';
 
-    for ($i = 0; $i < $attempt; $i += 1) {
-        $randomNum = random_int(0, 100);
-        line("Question: {$randomNum}");
-        $answer = prompt('Your answer');
-        $correctAnswer = (isEven($randomNum)) ? 'yes' : 'no';
-
-        if ($answer === $correctAnswer) {
-            print_r("Correct!\n");
-        } else {
-            return "'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'\nLet's try again, {$name}\n";
+            return [
+                'question' => $randomNum,
+                'correctAnswer' => $correctAnswer,
+            ];
         }
-        if ($i === 2) {
-            return "Congratulations, {$name}!\n";
-        }
-    }
-}
-
-print_r(brainEven());
+    ];
+};

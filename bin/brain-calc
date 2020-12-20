@@ -2,10 +2,6 @@
 
 <?php
 
-use function Src\Cli\greeting;
-use function cli\line;
-use function cli\prompt;
-
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
 
@@ -17,40 +13,29 @@ if (file_exists($autoloadPath1)) {
 
 function brainCalc()
 {
-    $name = greeting();
-    line('What is the result of the expression?');
-    $attempt = 3;
+    return [
+        'rules' => 'What is the result of the expression?',
+        'round' => function() {
+            $operations = ['+', '-', '*'];
+            $firstNum = random_int(0, 100);
+            $secondNum = random_int(0, 100);
+            $operation = $operations[array_rand($operations, 1)];
 
-    $operations = ['+', '-', '*'];
-    for($i = 0; $i < $attempt; $i += 1) {
-        $firstNum = random_int(0, 100);
-        $secondNum = random_int(0, 100);
-        $operation = $operations[array_rand($operations, 1)];
-
-        switch($operation) {
-            case '+':
-                $correctAnswer = $firstNum + $secondNum;
-                break;
-            case '-':
-                $correctAnswer = $firstNum - $secondNum;
-                break;
-            case '*':
-                $correctAnswer = $firstNum * $secondNum;
-                break;
+            switch($operation) {
+                case '+':
+                    $correctAnswer = $firstNum + $secondNum;
+                    break;
+                case '-':
+                    $correctAnswer = $firstNum - $secondNum;
+                    break;
+                case '*':
+                    $correctAnswer = $firstNum * $secondNum;
+                    break;
+            }
+                return [
+                    'question' => "{$firstNum} {$operation} {$secondNum}",
+                    'correctAnswer' => $correctAnswer,
+                ];
         }
-        line("Question: {$firstNum} {$operation} {$secondNum}");
-        $answer = prompt('Your answer');
-
-        if ((int) $answer === $correctAnswer) {
-            print_r("Correct!\n");
-        } else {
-            return "'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'\nLet's try again, {$name}\n";
-        }
-        if ($i === 2) {
-            return "Congratulations, {$name}!\n";
-        }
-    }
-
-}
-
-print_r(brainCalc());
+    ];
+};
