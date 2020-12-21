@@ -11,6 +11,10 @@
     "autoload": {
 	    "files": [
 		    "src/Cli.php",
+		    "src/brain-calc.php",
+            "src/brain-even.php",
+            "src/brain-gcd.php",
+		    "src/Engine.php",
 		    "utilites/random-num.php"
 	    ]
 	},

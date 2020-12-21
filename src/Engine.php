@@ -1,5 +1,7 @@
 <?php
 
+namespace Src\Engine;
+
 use function Src\Cli\greeting;
 use function cli\line;
 use function cli\prompt;
@@ -17,7 +19,7 @@ if (file_exists($autoloadPath1)) {
 
 $attempts = 3;
 
-function runGame($game, $attempts)
+function runGame($game, $attempts = 3)
 {
     $name = greeting();
     ['rules' => $rules] = $game;
