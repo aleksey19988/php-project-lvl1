@@ -18,7 +18,7 @@ if (file_exists($autoloadPath1)) {
 
 $attempts = 3;
 
-function runGame($game, $attempts = 3)
+function runGame($game, int $attempts = 3)
 {
     $name = greeting();
     ['rules' => $rules] = $game;
