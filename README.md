@@ -33,3 +33,11 @@ make brain-gcd
 ```
 
 [![brain-gcd](https://asciinema.org/a/AUv7oGaVjGxpd9frme3a6w0u0.svg)](https://asciinema.org/a/AUv7oGaVjGxpd9frme3a6w0u0)
+
+## Brain progression
+#### Start game command:
+```
+make brain-progression
+```
+
+[![brain-progression](https://asciinema.org/a/FPkPHIkD5dkEe5fD17uj45bmK.svg)](https://asciinema.org/a/FPkPHIkD5dkEe5fD17uj45bmK)
