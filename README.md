@@ -25,3 +25,11 @@ make brain-calc
 ```
 
 [![brain-calc](https://asciinema.org/a/tSGO95IINUid4TILc4cft6C6W.svg)](https://asciinema.org/a/tSGO95IINUid4TILc4cft6C6W)
+
+## Brain gcd
+#### Start game command:
+```
+make brain-gcd
+```
+
+[![brain-gcd](https://asciinema.org/a/AUv7oGaVjGxpd9frme3a6w0u0.svg)](https://asciinema.org/a/AUv7oGaVjGxpd9frme3a6w0u0)
