@@ -5,7 +5,6 @@ namespace Src\Engine;
 use function Src\Cli\greeting;
 use function cli\line;
 use function cli\prompt;
-use function Utilites\RandomNum\isEven;
 
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
@@ -35,10 +34,12 @@ function runGame($game, $attempts = 3)
         if ($answer === (string) $correctAnswer) {
             print_r("Correct!\n");
         } else {
-            return "'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'\nLet's try again, {$name}\n";
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'\nLet's try again, {$name}");
+            return;
         }
         if ($i === 2) {
-            return "Congratulations, {$name}!\n";
+            print_r("Congratulations, {$name}!\n");
+            return;
         }
     }
 };

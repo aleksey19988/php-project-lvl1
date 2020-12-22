@@ -3,7 +3,7 @@
 namespace Src\BrainGcd;
 
 function brainGcd() {
-    $game = [
+    return [
         'rules' => 'Find the greatest common divisor of given numbers.',
         'round' => function() {
             $firstNum = random_int(2, 100);
