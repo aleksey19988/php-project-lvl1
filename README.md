@@ -41,3 +41,11 @@ make brain-progression
 ```
 
 [![brain-progression](https://asciinema.org/a/FPkPHIkD5dkEe5fD17uj45bmK.svg)](https://asciinema.org/a/FPkPHIkD5dkEe5fD17uj45bmK)
+
+## Brain prime
+#### Start game command:
+```
+make brain-prime
+```
+
+[![brain-prime](https://asciinema.org/a/ryrnrxxlupxJoRYSyAwIUsjPN.svg)](https://asciinema.org/a/ryrnrxxlupxJoRYSyAwIUsjPN)
