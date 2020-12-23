@@ -1,6 +1,6 @@
 <?php
 
-namespace Utilites\RandomNum;
+namespace Utilites\IsEven;
 
 function isEven($num) {
     return $num % 2 === 0;

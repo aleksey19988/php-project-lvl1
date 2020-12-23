@@ -2,7 +2,7 @@
 
 namespace Src\BrainEven;
 
-use function Utilites\RandomNum\isEven;
+use function Utilites\IsEven\isEven;
 
 function brainEven()
 {

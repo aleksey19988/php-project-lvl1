@@ -10,12 +10,15 @@
     ],
     "autoload": {
 	    "files": [
-		    "src/Cli.php",
+            "src/Cli.php",
+		    "src/Engine.php",
 		    "src/brain-calc.php",
             "src/brain-even.php",
             "src/brain-gcd.php",
             "src/brain-progression.php",
-		    "src/Engine.php"
+            "src/brain-prime.php",
+            "utilites/isEven.php",
+            "utilites/prime-num.php"
 	    ]
 	},
     "bin": [
@@ -23,7 +26,8 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progression"
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
