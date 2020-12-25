@@ -2,8 +2,8 @@
 
 <?php
 
-use function Src\Engine\runGame;
-use function Src\BrainEven\brainEven;
+use function Brain\Games\Engine\runGame;
+use function Brain\Games\BrainEven\brainEven;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';

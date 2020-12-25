@@ -1,13 +1,15 @@
 <?php
 
-namespace Src\BrainPrime;
+namespace Brain\Games\BrainPrime;
 
 use function Utilites\PrimeNum\isPredicat;
+
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function brainPrime()
 {
     return [
-        'rules' => 'Answer "yes" if given number is prime. Otherwise answer "no".',
+        'rules' => rules,
         'round' => function() {
             $randomNum = random_int(2, 100);
             

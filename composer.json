@@ -17,8 +17,13 @@
             "src/brain-gcd.php",
             "src/brain-progression.php",
             "src/brain-prime.php",
-            "utilites/isEven.php",
-            "utilites/prime-num.php"
+            "utilites/ForBrainEven.php",
+            "utilites/PrimeNum.php",
+            "utilites/ForBrainCalc.php",
+            "utilites/ForBrainEven.php",
+            "utilites/ForBrainGcd.php",
+            "utilites/ForBrainProgression.php",
+            "utilites/PrimeNum.php"
 	    ]
 	},
     "bin": [

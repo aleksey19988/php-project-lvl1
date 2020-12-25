@@ -1,33 +1,26 @@
 <?php
 
-namespace Src\BrainGcd;
+namespace Brain\Games\BrainGcd;
+
+use function Utilites\Brain\Gcd\Functions\getDivisors;
+
+const rules = 'Find the greatest common divisor of given numbers.';
 
 function brainGcd() {
     return [
-        'rules' => 'Find the greatest common divisor of given numbers.',
+        'rules' => rules,
         'round' => function() {
             $firstNum = random_int(2, 100);
             $secondNum = random_int(2, 100);
-            $firstNumDivisors = [];
-            $secondNumDivisors = [];
-
-            for($i = 1; $i < $firstNum; $i += 1) {
-                if ($firstNum % $i === 0) {
-                    $firstNumDivisors[] = $i;
-                }
-            };
-            for($i = 1; $i < $secondNum; $i += 1) {
-                if ($secondNum % $i === 0) {
-                    $secondNumDivisors[] = $i;
-                }
-            };
+            $firstNumDivisors = getDivisors($firstNum);
+            $secondNumDivisors = getDivisors($secondNum);
 
             $commonDivisors = array_intersect($firstNumDivisors, $secondNumDivisors);
-            $correctAnswer = max($commonDivisors);
+            $result = max($commonDivisors);
 
             return [
                 'question' => "{$firstNum} {$secondNum}",
-                'correctAnswer' => $correctAnswer,
+                'correctAnswer' => $result,
             ];
         },
     ];
