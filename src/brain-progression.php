@@ -3,27 +3,27 @@
 namespace Brain\Games\BrainProgression;
 
 use function Utilites\Brain\Progression\Functions\generateProgression;
+use function Src\Brain\Games\Engine\runGame;
 
-const rules = 'What number is missing in the progression?';
-const minLengthOfProgression = 4;
+const RULES = 'What number is missing in the progression?';
+const MINLENGTHOFPROGRESSION = 4;
 
 function brainProgression()
 {
-    return [
-        'rules' => rules,
-        'round' => function() {
-            $lengthOfProgression = random_int(minLengthOfProgression, 14);
-            $interval = random_int(1, 20);
-            $progression = generateProgression($interval, $lengthOfProgression);
+    $round = function() {
+        $lengthOfProgression = random_int(MINLENGTHOFPROGRESSION, 14);
+        $interval = random_int(1, 20);
+        $progression = generateProgression($interval, $lengthOfProgression);
 
-            $positionHiddenElem = random_int(minLengthOfProgression, $lengthOfProgression);
-            $correctAnswer = $progression[$positionHiddenElem];
-            $progression[$positionHiddenElem] = '..';
+        $positionHiddenElem = random_int(MINLENGTHOFPROGRESSION, $lengthOfProgression);
+        $correctAnswer = $progression[$positionHiddenElem];
+        $progression[$positionHiddenElem] = '..';
 
-            return [
-                'question' => implode(' ', $progression),
-                'correctAnswer' => $correctAnswer,
-            ];
-        }
-    ];
+        return [
+            'question' => implode(' ', $progression),
+            'correctAnswer' => $correctAnswer,
+        ];
+    };
+
+    return runGame(RULES, $round);
 }

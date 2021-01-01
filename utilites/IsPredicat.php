@@ -1,6 +1,6 @@
 <?php
 
-namespace Utilites\PrimeNum;
+namespace Utilites\Brain\Prime\PrimeNum;
 
 function isPredicat($num) {
     for($i = 2; $i < $num; $i += 1) {

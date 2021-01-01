@@ -2,28 +2,28 @@
 
 namespace Brain\Games\BrainCalc;
 
-use function Utilites\Brain\Calc\Functions\getRandomOperator;
-use function Utilites\Brain\Calc\Functions\getResultOfExpression;
+use function Utilites\Brain\Calc\GetRandomOperator\getRandomOperator;
+use function Utilites\Brain\Calc\Calculate\calculate;
+use function Src\Brain\Games\Engine\runGame;
 
 
-const rules = 'What is the result of the expression?';
-const operations = ['+', '-', '*'];
+const RULES = 'What is the result of the expression?';
+const OPERATIONS = ['+', '-', '*'];
 
 function brainCalc()
 {
-    return [
-        'rules' => rules,
-        'round' => function() {
-            $firstNum = random_int(0, 100);
-            $secondNum = random_int(0, 100);
-            $operation = getRandomOperator(operations);
+    $round = function() {
+        $firstNum = random_int(0, 100);
+        $secondNum = random_int(0, 100);
+        $operation = getRandomOperator(OPERATIONS);
 
-            $result = getResultOfExpression($firstNum, $secondNum, $operation);
+        $result = calculate($firstNum, $secondNum, $operation);
 
-            return [
-                'question' => "{$firstNum} {$operation} {$secondNum}",
-                'correctAnswer' => $result,
-            ];
-        }
-    ];
+        return [
+            'question' => "{$firstNum} {$operation} {$secondNum}",
+            'correctAnswer' => $result,
+        ];
+    };
+
+    return runGame(RULES, $round);
 };

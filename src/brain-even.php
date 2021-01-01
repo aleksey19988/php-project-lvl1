@@ -2,22 +2,22 @@
 
 namespace Brain\Games\BrainEven;
 
-use function Utilites\IsEven\isEven;
+use function Utilites\Brain\Even\IsEven\isEven;
+use function Src\Brain\Games\Engine\runGame;
 
-const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function brainEven()
 {
-    return [
-        'rules' => rules,
-        'round' => function() {
-            $randomNum = random_int(0, 100);
-            $result = (isEven($randomNum)) ? 'yes' : 'no';
+    $round = function() {
+        $randomNum = random_int(0, 100);
+        $result = (isEven($randomNum)) ? 'yes' : 'no';
 
-            return [
-                'question' => $randomNum,
-                'correctAnswer' => $result,
-            ];
-        }
-    ];
+        return [
+            'question' => $randomNum,
+            'correctAnswer' => $result,
+        ];
+    };
+
+    return runGame(RULES, $round);
 };

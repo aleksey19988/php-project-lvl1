@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Games\Engine;
+namespace Src\Brain\Games\Engine;
 
 use function Brain\Games\Cli\greeting;
 use function cli\line;
@@ -18,14 +18,12 @@ if (file_exists($autoloadPath1)) {
 
 $attempts = 3;
 
-function runGame($game, int $attempts = 3)
+function runGame($rules, $round, int $attempts = 3)
 {
     $name = greeting();
-    ['rules' => $rules] = $game;
     line($rules);
 
     for($i = 0; $i < $attempts; $i += 1) {
-        ['round' => $round] = $game;
         ['question' => $question, 'correctAnswer' => $correctAnswer] = $round();
 
         print_r("{$question}\n");
