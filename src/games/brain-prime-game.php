@@ -9,16 +9,15 @@ const RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function brainPrime()
 {
-    $round = function() {
+    $round = function () {
         $randomNum = random_int(2, 100);
-        
         $result = (isPredicat($randomNum)) ? 'yes' : 'no';
 
         return [
-            'question'=> $randomNum,
+            'question' => $randomNum,
             'correctAnswer' => $result,
         ];
     };
 
     return runGame(RULES, $round);
-};
+}

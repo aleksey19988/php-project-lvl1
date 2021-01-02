@@ -7,9 +7,9 @@ use function Src\Brain\Games\Engine\runGame;
 
 const RULES = 'Find the greatest common divisor of given numbers.';
 
-function brainGcd() 
+function brainGcd()
 {
-    $round = function() {
+    $round = function () {
         $firstNum = random_int(2, 100);
         $secondNum = random_int(2, 100);
         $firstNumDivisors = getDivisors($firstNum);
@@ -25,4 +25,4 @@ function brainGcd()
     };
 
     return runGame(RULES, $round);
-};
+}

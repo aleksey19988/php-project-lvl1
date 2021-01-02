@@ -6,7 +6,6 @@ use function Brain\Games\Cli\greeting;
 use function cli\line;
 use function cli\prompt;
 
-
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
 
@@ -21,7 +20,7 @@ function runGame($rules, $round, int $attempts = 3)
     $name = greeting();
     line($rules);
 
-    for($i = 0; $i < $attempts; $i += 1) {
+    for ($i = 0; $i < $attempts; $i += 1) {
         ['question' => $question, 'correctAnswer' => $correctAnswer] = $round();
 
         line("{$question}\n");
@@ -38,4 +37,4 @@ function runGame($rules, $round, int $attempts = 3)
             return;
         }
     }
-};
+}

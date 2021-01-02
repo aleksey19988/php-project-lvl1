@@ -9,7 +9,7 @@ const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function brainEven()
 {
-    $round = function() {
+    $round = function () {
         $randomNum = random_int(0, 100);
         $result = (isEven($randomNum)) ? 'yes' : 'no';
 
@@ -20,4 +20,4 @@ function brainEven()
     };
 
     return runGame(RULES, $round);
-};
+}

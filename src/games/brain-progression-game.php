@@ -10,7 +10,7 @@ const MINLENGTHOFPROGRESSION = 4;
 
 function brainProgression()
 {
-    $round = function() {
+    $round = function () {
         $lengthOfProgression = random_int(MINLENGTHOFPROGRESSION, 14);
         $interval = random_int(1, 20);
         $progression = generateProgression($interval, $lengthOfProgression);

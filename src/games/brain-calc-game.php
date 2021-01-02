@@ -4,13 +4,12 @@ namespace Brain\Games\BrainCalc;
 
 use function Src\Brain\Games\Engine\runGame;
 
-
 const RULES = 'What is the result of the expression?';
 const OPERATIONS = ['+', '-', '*'];
 
 function calculate($firstNum, $secondNum, $operation)
 {
-    switch($operation) {
+    switch ($operation) {
         case '+':
             return ($firstNum + $secondNum);
             break;
@@ -30,7 +29,7 @@ function getRandomOperator($operations)
 
 function brainCalc()
 {
-    $round = function() {
+    $round = function () {
         $firstNum = random_int(0, 100);
         $secondNum = random_int(0, 100);
         $operation = getRandomOperator(OPERATIONS);
@@ -44,4 +43,4 @@ function brainCalc()
     };
 
     return runGame(RULES, $round);
-};
+}
