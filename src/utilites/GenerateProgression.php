@@ -1,6 +1,6 @@
 <?php
 
-namespace Utilites\Brain\Progression\Functions;
+namespace Brain\Games\Utilites\Progression;
 
 function generateProgression($firstElem, $lengthOfProgression)
 {

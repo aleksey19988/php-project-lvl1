@@ -2,7 +2,7 @@
 
 namespace Brain\Games\BrainPrime;
 
-use function Utilites\Brain\Prime\PrimeNum\isPredicat;
+use function Brain\Games\Utilites\Prime\Num\isPredicat;
 use function Src\Brain\Games\Engine\runGame;
 
 const RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';

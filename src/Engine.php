@@ -16,8 +16,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-$attempts = 3;
-
 function runGame($rules, $round, int $attempts = 3)
 {
     $name = greeting();
@@ -26,7 +24,7 @@ function runGame($rules, $round, int $attempts = 3)
     for($i = 0; $i < $attempts; $i += 1) {
         ['question' => $question, 'correctAnswer' => $correctAnswer] = $round();
 
-        print_r("{$question}\n");
+        line("{$question}\n");
         $answer = prompt('Your answer');
 
         if ($answer === (string) $correctAnswer) {

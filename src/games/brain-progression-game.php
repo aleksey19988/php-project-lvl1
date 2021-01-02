@@ -2,7 +2,7 @@
 
 namespace Brain\Games\BrainProgression;
 
-use function Utilites\Brain\Progression\Functions\generateProgression;
+use function Brain\Games\Utilites\Progression\generateProgression;
 use function Src\Brain\Games\Engine\runGame;
 
 const RULES = 'What number is missing in the progression?';

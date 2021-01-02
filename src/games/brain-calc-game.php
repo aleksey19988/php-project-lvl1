@@ -2,13 +2,31 @@
 
 namespace Brain\Games\BrainCalc;
 
-use function Utilites\Brain\Calc\GetRandomOperator\getRandomOperator;
-use function Utilites\Brain\Calc\Calculate\calculate;
 use function Src\Brain\Games\Engine\runGame;
 
 
 const RULES = 'What is the result of the expression?';
 const OPERATIONS = ['+', '-', '*'];
+
+function calculate($firstNum, $secondNum, $operation)
+{
+    switch($operation) {
+        case '+':
+            return ($firstNum + $secondNum);
+            break;
+        case '-':
+            return ($firstNum - $secondNum);
+            break;
+        case '*':
+            return ($firstNum * $secondNum);
+            break;
+    }
+}
+
+function getRandomOperator($operations)
+{
+    return $operations[array_rand($operations, 1)];
+}
 
 function brainCalc()
 {

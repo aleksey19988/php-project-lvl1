@@ -2,7 +2,6 @@
 
 <?php
 
-use function Brain\Games\Engine\runGame;
 use function Brain\Games\BrainGcd\brainGcd;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';

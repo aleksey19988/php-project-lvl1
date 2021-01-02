@@ -2,7 +2,7 @@
 
 <?php
 
-use function Brain\Games\greeting;
+use function Brain\Games\Cli\greeting;
 
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';

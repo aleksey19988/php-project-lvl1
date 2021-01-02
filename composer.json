@@ -12,17 +12,15 @@
 	    "files": [
             "src/Cli.php",
 		    "src/Engine.php",
-		    "src/brain-calc.php",
-            "src/brain-even.php",
-            "src/brain-gcd.php",
-            "src/brain-progression.php",
-            "src/brain-prime.php",
-            "utilites/Calculate.php",
-            "utilites/GenerateProgression.php",
-            "utilites/GetDivisors.php",
-            "utilites/GetRandomOperator.php",
-            "utilites/IsEven.php",
-            "utilites/IsPredicat.php"
+		    "src/games/brain-calc-game.php",
+            "src/games/brain-even-game.php",
+            "src/games/brain-gcd-game.php",
+            "src/games/brain-progression-game.php",
+            "src/games/brain-prime-game.php",
+            "src/utilites/GenerateProgression.php",
+            "src/utilites/GetDivisors.php",
+            "src/utilites/IsEven.php",
+            "src/utilites/IsPredicat.php"
 	    ]
 	},
     "bin": [

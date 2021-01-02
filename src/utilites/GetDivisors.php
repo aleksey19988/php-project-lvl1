@@ -1,6 +1,6 @@
 <?php
 
-namespace Utilites\Brain\Gcd\Functions;
+namespace Brain\Games\Utilites\GetDivisors;
 
 function getDivisors($num) {
     $result = [];

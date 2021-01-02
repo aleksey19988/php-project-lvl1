@@ -1,6 +1,6 @@
 <?php
 
-namespace Utilites\Brain\Even\IsEven;
+namespace Brain\Games\Utilites\IsEven;
 
 function isEven($num) {
     return $num % 2 === 0;
