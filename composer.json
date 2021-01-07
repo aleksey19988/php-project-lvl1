@@ -10,17 +10,17 @@
     ],
     "autoload": {
 	    "files": [
-            "src/Cli.php",
-		    "src/Games/Calc.php",
-            "src/Games/Even.php",
-            "src/Games/Gcd.php",
-            "src/Games/Progression.php",
-            "src/Games/Prime.php",
-            "src/Utilites/GenerateProgression.php",
-            "src/Utilites/GetDivisors.php",
-            "src/Utilites/IsEven.php",
-            "src/Utilites/IsPredicat.php",
-		    "src/Engine.php"
+            "Src/Cli.php",
+		    "Src/Games/Calc.php",
+            "Src/Games/Even.php",
+            "Src/Games/Gcd.php",
+            "Src/Games/Progression.php",
+            "Src/Games/Prime.php",
+            "Src/Utilites/GenerateProgression.php",
+            "Src/Utilites/GetDivisors.php",
+            "Src/Utilites/IsEven.php",
+            "Src/Utilites/IsPredicat.php",
+		    "Src/Engine.php"
 	    ]
 	},
     "bin": [
