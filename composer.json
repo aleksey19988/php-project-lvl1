@@ -10,17 +10,17 @@
     ],
     "autoload": {
 	    "files": [
-            "src/Cli.php",
-		    "src/Engine.php",
-		    "src/games/brain-calc-game.php",
-            "src/games/brain-even-game.php",
-            "src/games/brain-gcd-game.php",
-            "src/games/brain-progression-game.php",
-            "src/games/brain-prime-game.php",
-            "src/utilites/GenerateProgression.php",
-            "src/utilites/GetDivisors.php",
-            "src/utilites/IsEven.php",
-            "src/utilites/IsPredicat.php"
+            "Src/Cli.php",
+		    "Src/Games/Calc.php",
+            "Src/Games/Even.php",
+            "Src/Games/Gcd.php",
+            "Src/Games/Progression.php",
+            "Src/Games/Prime.php",
+            "Src/Utilites/GenerateProgression.php",
+            "Src/Utilites/GetDivisors.php",
+            "Src/Utilites/IsEven.php",
+            "Src/Utilites/IsPredicat.php",
+		    "Src/Engine.php"
 	    ]
 	},
     "bin": [
