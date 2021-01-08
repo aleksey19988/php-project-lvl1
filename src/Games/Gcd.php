@@ -7,7 +7,8 @@ use function Src\Brain\Games\Engine\runGame;
 
 const RULES = 'Find the greatest common divisor of given numbers.';
 
-function gcd ($a, $b) {
+function gcd($a, $b)
+{
     return $b ? gcd($b, $a % $b) : $a;
 }
 
@@ -21,7 +22,7 @@ function brainGcd()
 
         // $commonDivisors = array_intersect($firstNumDivisors, $secondNumDivisors);
         // $result = max($commonDivisors);
-        $result = array_reduce(array($firstNum, $secondNum), 'gcd');
+        $result = gcd($firstNum, $secondNum);
 
         return [
             'question' => "{$firstNum} {$secondNum}",
