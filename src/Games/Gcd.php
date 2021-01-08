@@ -17,11 +17,7 @@ function brainGcd()
     $round = function () {
         $firstNum = random_int(2, 100);
         $secondNum = random_int(2, 100);
-        // $firstNumDivisors = getDivisors($firstNum);
-        // $secondNumDivisors = getDivisors($secondNum);
-
-        // $commonDivisors = array_intersect($firstNumDivisors, $secondNumDivisors);
-        // $result = max($commonDivisors);
+        
         $result = gcd($firstNum, $secondNum);
 
         return [
