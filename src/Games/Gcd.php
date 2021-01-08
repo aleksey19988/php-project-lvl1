@@ -17,7 +17,6 @@ function brainGcd()
     $round = function () {
         $firstNum = random_int(2, 100);
         $secondNum = random_int(2, 100);
-        
         $result = gcd($firstNum, $secondNum);
 
         return [
