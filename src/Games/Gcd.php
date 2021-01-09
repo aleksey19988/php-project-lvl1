@@ -9,7 +9,11 @@ const RULES = 'Find the greatest common divisor of given numbers.';
 
 function gcd(int $a, int $b): int
 {
-    return $b ? gcd($b, $a % $b) : $a;
+    if ($b) {
+        return gcd($b, $a % $b);
+    } else {
+        return $a;
+    }
 }
 
 function brainGcd(): void

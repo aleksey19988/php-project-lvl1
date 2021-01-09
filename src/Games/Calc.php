@@ -9,14 +9,20 @@ const OPERATIONS = ['+', '-', '*'];
 
 function calculate(int $firstNum, int $secondNum, string $operation): int
 {
+    $result = 0;
+
     switch ($operation) {
         case '+':
-            return $firstNum + $secondNum;
+            $result = $firstNum + $secondNum;
+            break;
         case '-':
-            return $firstNum - $secondNum;
+            $result = $firstNum - $secondNum;
+            break;
         case '*':
-            return $firstNum * $secondNum;
+            $result = $firstNum * $secondNum;
     }
+
+    return $result;
 }
 
 function brainCalc(): void
