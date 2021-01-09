@@ -11,17 +11,12 @@ function calculate(int $firstNum, int $secondNum, string $operation): int
 {
     switch ($operation) {
         case '+':
-            return ($firstNum + $secondNum);
+            return $firstNum + $secondNum;
         case '-':
-            return ($firstNum - $secondNum);
+            return $firstNum - $secondNum;
         case '*':
-            return ($firstNum * $secondNum);
+            return $firstNum * $secondNum;
     }
-}
-
-function getRandomOperator(array $operations): string
-{
-    return $operations[array_rand($operations, 1)];
 }
 
 function brainCalc(): void
@@ -29,7 +24,7 @@ function brainCalc(): void
     $round = function (): array {
         $firstNum = random_int(0, 100);
         $secondNum = random_int(0, 100);
-        $operation = getRandomOperator(OPERATIONS);
+        $operation = OPERATIONS[array_rand(OPERATIONS, 1)];
 
         $result = calculate($firstNum, $secondNum, $operation);
 
