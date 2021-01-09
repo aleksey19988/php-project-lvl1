@@ -8,9 +8,9 @@ use function Src\Brain\Games\Engine\runGame;
 const RULES = 'What number is missing in the progression?';
 const MIN_LENGTH_OF_PROGRESSION = 4;
 
-function brainProgression()
+function brainProgression(): void
 {
-    $round = function () {
+    $round = function (): array {
         $lengthOfProgression = random_int(MIN_LENGTH_OF_PROGRESSION, 14);
         $interval = random_int(1, 20);
         $progression = generateProgression($interval, $lengthOfProgression);

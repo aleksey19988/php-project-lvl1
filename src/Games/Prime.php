@@ -7,9 +7,9 @@ use function Src\Brain\Games\Engine\runGame;
 
 const RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function brainPrime()
+function brainPrime(): void
 {
-    $round = function () {
+    $round = function (): array {
         $randomNum = random_int(2, 100);
         $result = (isPredicat($randomNum)) ? 'yes' : 'no';
 

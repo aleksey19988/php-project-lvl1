@@ -7,7 +7,7 @@ use function Src\Brain\Games\Engine\runGame;
 const RULES = 'What is the result of the expression?';
 const OPERATIONS = ['+', '-', '*'];
 
-function calculate(int $firstNum, int $secondNum, string $operation)
+function calculate(int $firstNum, int $secondNum, string $operation): int
 {
     switch ($operation) {
         case '+':
@@ -19,14 +19,14 @@ function calculate(int $firstNum, int $secondNum, string $operation)
     }
 }
 
-function getRandomOperator($operations)
+function getRandomOperator(array $operations): string
 {
     return $operations[array_rand($operations, 1)];
 }
 
-function brainCalc()
+function brainCalc(): void
 {
-    $round = function () {
+    $round = function (): array {
         $firstNum = random_int(0, 100);
         $secondNum = random_int(0, 100);
         $operation = getRandomOperator(OPERATIONS);

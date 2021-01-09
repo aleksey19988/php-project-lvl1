@@ -12,9 +12,9 @@ function gcd(int $a, int $b): int
     return $b ? gcd($b, $a % $b) : $a;
 }
 
-function brainGcd()
+function brainGcd(): void
 {
-    $round = function () {
+    $round = function (): array {
         $firstNum = random_int(2, 100);
         $secondNum = random_int(2, 100);
         $result = gcd($firstNum, $secondNum);
