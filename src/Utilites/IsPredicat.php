@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Utilites\Prime\Num;
 
-function isPredicat(int $num)
+function isPredicat(int $num): bool
 {
     for ($i = 2; $i < $num; $i += 1) {
         if ($num % $i === 0) {
