@@ -20,7 +20,7 @@ function runGame(string $rules, callable $round, int $attempts = 3): void
         if ($answer === (string) $correctAnswer) {
             line("Correct!\n");
         } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}.'\nLet's try again, {$name}!");
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.\nLet's try again, {$name}!");
             return;
         }
     }
