@@ -6,7 +6,7 @@ use function Brain\Games\Cli\greeting;
 use function cli\line;
 use function cli\prompt;
 
-function runGame($rules, $round, int $attempts = 3)
+function runGame(string $rules, callable $round, int $attempts = 3): void
 {
     $name = greeting();
     line($rules);
