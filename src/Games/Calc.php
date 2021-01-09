@@ -7,7 +7,7 @@ use function Src\Brain\Games\Engine\runGame;
 const RULES = 'What is the result of the expression?';
 const OPERATIONS = ['+', '-', '*'];
 
-function calculate($firstNum, $secondNum, $operation)
+function calculate(int $firstNum, int $secondNum, string $operation)
 {
     switch ($operation) {
         case '+':

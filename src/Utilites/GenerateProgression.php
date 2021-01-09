@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Utilites\Progression;
 
-function generateProgression($firstElem, $lengthOfProgression)
+function generateProgression(int $firstElem, int $lengthOfProgression): array
 {
     $progression = [];
     $progression[] = $firstElem;

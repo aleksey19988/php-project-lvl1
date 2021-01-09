@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Utilites\GetDivisors;
 
-function getDivisors($num)
+function getDivisors(int $num): array
 {
     $result = [];
 

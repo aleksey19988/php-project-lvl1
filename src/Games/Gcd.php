@@ -7,7 +7,7 @@ use function Src\Brain\Games\Engine\runGame;
 
 const RULES = 'Find the greatest common divisor of given numbers.';
 
-function gcd($a, $b)
+function gcd(int $a, int $b): int
 {
     return $b ? gcd($b, $a % $b) : $a;
 }
