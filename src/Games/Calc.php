@@ -30,7 +30,7 @@ function brainCalc(): void
     $round = function (): array {
         $firstNum = random_int(0, 100);
         $secondNum = random_int(0, 100);
-        $operation = OPERATIONS[array_rand(OPERATIONS, 1)];
+        $operation = OPERATIONS[(int)array_rand(OPERATIONS, 1)];
 
         $result = calculate($firstNum, $secondNum, $operation);
 
