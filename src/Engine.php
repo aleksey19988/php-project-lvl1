@@ -14,7 +14,7 @@ function runGame($rules, $round, int $attempts = 3)
     for ($i = 0; $i < $attempts; $i += 1) {
         ['question' => $question, 'correctAnswer' => $correctAnswer] = $round();
 
-        line("{$question}\n");
+        line("Question: {$question}\n");
         $answer = prompt('Your answer');
 
         if ($answer === (string) $correctAnswer) {
