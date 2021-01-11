@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/aleksey19988/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/aleksey19988/php-project-lvl1/actions)
 ### Maintainbility:
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a97cc7db03a10cacfeb4/maintainability)](https://codeclimate.com/github/aleksey19988/php-project-lvl1/maintainability)
 ### Github Actions:
 ![linter](https://github.com/aleksey19988/php-project-lvl1/workflows/linter/badge.svg)
 
