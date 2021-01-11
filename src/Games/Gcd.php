@@ -2,10 +2,9 @@
 
 namespace Brain\Games\BrainGcd;
 
-use function Brain\Games\Utilites\GetDivisors\getDivisors;
 use function Src\Brain\Games\Engine\runGame;
 
-const RULES = 'Find the greatest common divisor of given numbers.';
+const TASK = 'Find the greatest common divisor of given numbers.';
 
 function gcd(int $a, int $b): int
 {
@@ -17,7 +16,7 @@ function gcd(int $a, int $b): int
 
 function brainGcd(): void
 {
-    $round = function (): array {
+    $generateRound = function (): array {
         $firstNum = random_int(2, 100);
         $secondNum = random_int(2, 100);
         $result = gcd($firstNum, $secondNum);
@@ -28,5 +27,5 @@ function brainGcd(): void
         ];
     };
 
-    runGame(RULES, $round);
+    runGame(TASK, $generateRound);
 }

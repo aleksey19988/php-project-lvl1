@@ -16,10 +16,6 @@
             "src/Games/Gcd.php",
             "src/Games/Progression.php",
             "src/Games/Prime.php",
-            "src/Utilites/GenerateProgression.php",
-            "src/Utilites/GetDivisors.php",
-            "src/Utilites/IsEven.php",
-            "src/Utilites/IsPredicat.php",
 		    "src/Engine.php"
 	    ]
 	},

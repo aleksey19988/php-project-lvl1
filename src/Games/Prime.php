@@ -2,16 +2,29 @@
 
 namespace Brain\Games\BrainPrime;
 
-use function Brain\Games\Utilites\Prime\Num\isPredicat;
 use function Src\Brain\Games\Engine\runGame;
 
-const RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+function isPrimeNum(int $num): bool
+{
+    if ($num < 1) {
+        return false;
+    }
+    
+    for ($i = 2; $i < $num / 2; $i += 1) {
+        if ($num % $i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
 
 function brainPrime(): void
 {
-    $round = function (): array {
+    $generateRound = function (): array {
         $randomNum = random_int(2, 100);
-        $result = (isPredicat($randomNum)) ? 'yes' : 'no';
+        $result = (isPrimeNum($randomNum)) ? 'yes' : 'no';
 
         return [
             'question' => $randomNum,
@@ -19,5 +32,5 @@ function brainPrime(): void
         ];
     };
 
-    runGame(RULES, $round);
+    runGame(TASK, $generateRound);
 }
