@@ -2,13 +2,14 @@
 
 namespace Src\Brain\Games\Engine;
 
-use function Brain\Games\Cli\greeting;
 use function cli\line;
 use function cli\prompt;
 
 function runGame(string $rules, callable $round, int $attempts = 3): void
 {
-    $name = greeting();
+    line('Welcome to the Brain Game!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
     line($rules);
 
     for ($i = 0; $i < $attempts; $i += 1) {
