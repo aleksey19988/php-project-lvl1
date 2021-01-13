@@ -9,7 +9,7 @@ const OPERATIONS = ['+', '-', '*'];
 
 function calculate(int $firstNum, int $secondNum, string $operation): int
 {
-    $result = 0;
+    $result = null;
 
     switch ($operation) {
         case '+':
@@ -20,6 +20,10 @@ function calculate(int $firstNum, int $secondNum, string $operation): int
             break;
         case '*':
             $result = $firstNum * $secondNum;
+    }
+
+    if ($result === null) {
+        throw new \Exception("Incorrect value");
     }
 
     return $result;
