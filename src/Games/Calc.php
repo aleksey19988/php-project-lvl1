@@ -9,8 +9,6 @@ const OPERATIONS = ['+', '-', '*'];
 
 function calculate(int $firstNum, int $secondNum, string $operation): int
 {
-    $result = null;
-
     switch ($operation) {
         case '+':
             $result = $firstNum + $secondNum;
