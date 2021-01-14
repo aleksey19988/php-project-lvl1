@@ -18,6 +18,7 @@ function calculate(int $firstNum, int $secondNum, string $operation): int
             break;
         case '*':
             $result = $firstNum * $secondNum;
+            break;
         default:
             throw new \Exception("Incorrect value");
     }
