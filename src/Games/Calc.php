@@ -20,10 +20,8 @@ function calculate(int $firstNum, int $secondNum, string $operation): int
             break;
         case '*':
             $result = $firstNum * $secondNum;
-    }
-
-    if ($result === null) {
-        throw new \Exception("Incorrect value");
+        default:
+            throw new \Exception("Incorrect value");
     }
 
     return $result;
